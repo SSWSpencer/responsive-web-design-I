@@ -1,3 +1,268 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 
+
+
+
+
+/* Remove This Comment and This Text to Visualize Elements
+
+
+
+
+*{
+	border: 1px solid rgb(150, 150, 150);
+} 
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+/* ------------------------------------Desktop Header------------------------------------ */
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+header nav{
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 20px;
+}
+header nav a{
+	text-decoration: none;
+	color: grey;
+}
+
+/* ------------------------------------Desktop Index Top------------------------------------ */
+.banner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+.banner #iod{
+	font-size: 75px;
+	line-height: 0.8;
+	text-align: center;
+}
+.banner a{
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	padding: 0px 30px;
+	border: 1px solid black;
+}
+
+/* ------------------------------------Desktop Index Mid------------------------------------ */
+.mid p{
+	font-size:18px;
+}
+.mid{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 70%;
+	margin: 20px auto;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+.mid1{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.mid1 div{
+	width: 48%;
+}
+.middle-img{
+	width: 100%;
+}
+.mid2{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.mid2 div{
+	width: 30%;
+}
+
+/* ------------------------------------Desktop Index Footer------------------------------------ */
+
+footer{
+	width: 70%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+footer .copyright{
+	font-size: 15px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+/* --------------------------------------------------- Mobile Webpage Layout--------------------------------------------------- */
+
+@media(max-width: 500px){
+	header{
+		flex-direction: column-reverse;
+		width: 90%;
+		margin: 0 auto;
+		justify-content: center;
+	}
+	header nav{
+		flex-direction: column;
+		text-align: center;
+		margin-top: 10px;
+		width: 100%;
+	}
+	header nav a{
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		border-bottom: 2px solid grey;
+	}
+	#topNav{
+		border-top: 2px solid grey;
+	}
+	
+	.banner{
+		margin: 0 auto;
+		padding: 40px 0 60px 0;
+		width: 90%;
+		flex-direction: column;
+	}
+	.banner #snip{
+		width: 0%;
+	}
+
+	.mid{
+		width: 90%;
+	}
+	.mid1{
+		flex-direction: column;
+	}
+	.mid1 div{
+		width: 100%;
+		padding-bottom: 40px;
+	}
+	.mid2{
+		flex-direction: column;
+	}
+	.mid2 div{
+		width: 100%;
+		padding-bottom: 40px;
+	}
+
+	footer{
+		width: 90%;
+	}
+}
+
+
+/* --------------------------------------------------- Tablet Webpage Layout--------------------------------------------------- */
+@media(max-width: 800px){
+	header{
+		flex-direction: column-reverse;
+		width: 90%;
+		margin: 0 auto;
+		justify-content: center;
+	}
+	header nav{
+		width: 100%;
+		margin-top: 20px;
+		justify-content: space-evenly;
+	}
+
+	.banner{
+		margin-top: 60px;
+		flex-direction: column;
+	}
+	.banner #snip{
+		width: 0%;
+	}
+
+	.mid{
+		width: 90%;
+	}
+	
+	footer{
+		width: 90%;
+	}
+		
+}
